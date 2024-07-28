@@ -62,10 +62,20 @@ server {
 
     server_name <DOMAIN.COM> <WWW.DOMAIN.COM>; # Domain names this server block responds to
 
-    location /filepath {
-        alias /var/www/html/ResourceManagement; # Maps /filepath to /var/www/html/ResourceManagement
+    #www.domain.com/project1
+
+    location /project1 {
+        alias /var/www/html/<PROJECTTITLE>; # Maps /filepath to /var/www/html/ResourceManagement
         index index.html; # Default file to serve if no specific file is requested in this location
-        try_files $uri $uri/ /filepath/index.html; # Try to serve the requested file, if not found, serve /filepath/index.html
+        try_files $uri $uri/ /project1/index.html; # Try to serve the requested file, if not found, serve /filepath/index.html
+    }
+
+    #www.domain.com/project2
+
+    location /project2 {
+        alias /var/www/html/<PROJECTTITLE>; # Maps /filepath to /var/www/html/ResourceManagement
+        index index.html; # Default file to serve if no specific file is requested in this location
+        try_files $uri $uri/ /project2/index.html; # Try to serve the requested file, if not found, serve /filepath/index.html
     }
 
     location / {
