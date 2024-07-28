@@ -26,6 +26,12 @@ sudo chmod -R 755 /var/www/<PROJECTTITLE>
 
 ### 2. Create Nginx Configuration File
 
+First, remove the default Nginx configuration file to avoid conflicts:
+
+```bash
+sudo rm /etc/nginx/sites-enabled/default
+```
+
 Create a new Nginx configuration file for your project:
 
 ```bash
