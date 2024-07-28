@@ -1,4 +1,4 @@
-# Setting Up SSL/TLS with Certbot for Nginx
+# Setting Up SSL/TLS with Certbot
 
 This guide will help you set up SSL/TLS for your Nginx server using Certbot. Follow the steps below to install Certbot, obtain an SSL/TLS certificate, and configure automatic renewal.
 
